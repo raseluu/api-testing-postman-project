@@ -135,5 +135,3 @@ Through this project, the following API testing skills were practiced:
 
 # Author
 Created by Rasel.
-
-Created by **[Your Name]** as part of a QA portfolio project to demonstrate API testing skills using Postman.
