@@ -1,8 +1,8 @@
-# API Testing Project – JSONPlaceholder API (Postman)
+# API Testing Project – JSONPlaceholder (Postman)
 
 ## Project Overview
 
-This project demonstrates API testing using Postman by testing public REST APIs from JSONPlaceholder. The objective of this project is to practice sending HTTP requests, validating responses, and understanding core API testing concepts such as query parameters, path parameters, request bodies, and HTTP methods.
+This project demonstrates API testing using Postman by testing public REST APIs from JSONPlaceholder. The goal of this project is to practice sending HTTP requests, understanding API behavior, and working with core API testing concepts such as HTTP methods, path parameters, query parameters, request bodies, and Collection variables.
 
 ## Tool Used
 
@@ -12,23 +12,27 @@ This project demonstrates API testing using Postman by testing public REST APIs 
 
 https://jsonplaceholder.typicode.com
 
-JSONPlaceholder provides a free fake REST API used for learning and testing API requests.
+JSONPlaceholder is a free fake REST API used for learning and testing API requests.
 
-## API Requests Implemented
+---
+
+# API Requests Implemented
 
 The following API requests were created and tested in Postman:
 
-| Request Name     | Method | Endpoint           | Description                                   |
-| ---------------- | ------ | ------------------ | --------------------------------------------- |
-| Get All Posts    | GET    | /posts             | Retrieve all posts                            |
-| Get Single Post  | GET    | /posts/1           | Retrieve a specific post using path parameter |
-| Create Post      | POST   | /posts             | Create a new post using JSON request body     |
-| Update Post      | PUT    | /posts/1           | Update an existing post                       |
-| Delete Post      | DELETE | /posts/1           | Delete a specific post                        |
-| Query Parameters | GET    | /comments?postId=4 | Retrieve comments filtered by query parameter |
-| Path Parameters  | GET    | /posts/5           | Retrieve a post using path parameter          |
+| Request Name     | Method | Endpoint           | Description                                     |
+| ---------------- | ------ | ------------------ | ----------------------------------------------- |
+| Get All Posts    | GET    | /posts             | Retrieve all posts                              |
+| Get Single Post  | GET    | /posts/1           | Retrieve a specific post using a path parameter |
+| Create Post      | POST   | /posts             | Create a new post using JSON request body       |
+| Update Post      | PUT    | /posts/1           | Update an existing post                         |
+| Delete Post      | DELETE | /posts/1           | Delete a specific post                          |
+| Query Parameters | GET    | /comments?postId=4 | Retrieve comments using query parameter         |
+| Path Parameters  | GET    | /posts/5           | Retrieve a specific post using path parameter   |
 
-## API Concepts Practiced
+---
+
+# API Concepts Practiced
 
 This project covers the following API testing concepts:
 
@@ -37,14 +41,42 @@ This project covers the following API testing concepts:
 * Query Parameters
 * JSON Request Body
 * REST API Endpoints
-* API Response Verification
 * Postman Collections
+* Collection Variables
 
-## Example Request Body
+---
+
+# Collection Variable
+
+An collection variable was used to store the base API URL.
+
+Variable Name:
+
+```text id="v1"
+base-url
+```
+
+Example Value:
+
+```text id="v2"
+https://jsonplaceholder.typicode.com
+```
+
+Example Request Using Variable:
+
+```text id="v3"
+{{base-url}}/posts
+```
+
+Using collection variables helps maintain cleaner and more reusable API requests.
+
+---
+
+# Example Request Body
 
 Example JSON body used in the **Create Post** request:
 
-```json
+```json id="v4"
 {
  "title": "API Testing",
  "body": "Learning Postman",
@@ -52,11 +84,9 @@ Example JSON body used in the **Create Post** request:
 }
 ```
 
-## Example Updated Request Body
+Example JSON body used in the **Update Post** request:
 
-Used in the **Update Post** request:
-
-```json
+```json id="v5"
 {
  "id": 1,
  "title": "Updated Post",
@@ -65,9 +95,11 @@ Used in the **Update Post** request:
 }
 ```
 
-## Project Structure
+---
 
-```
+# Project Structure
+
+```text id="v6"
 api-testing-postman-project
 │
 ├── Postman_Collection
@@ -76,23 +108,32 @@ api-testing-postman-project
 └── README.md
 ```
 
-## How to Use This Collection
+---
+
+# How to Use This Collection
 
 1. Open Postman.
 2. Click **Import**.
 3. Upload the JSON collection file.
-4. Run the requests inside the collection to test the API endpoints.
+4. Set the Collection variable `base-url`.
+5. Run the requests to test the API endpoints.
 
-## Learning Outcome
+---
+
+# Learning Outcome
 
 Through this project, the following API testing skills were practiced:
 
 * Sending HTTP requests using Postman
 * Testing REST APIs
-* Using query parameters and path parameters
+* Using path parameters and query parameters
 * Working with JSON request bodies
-* Organizing API requests in Postman collections
+* Using collection variables
+* Organizing API requests into Postman collections
 
-## Author
+---
 
+# Author
 Created by Rasel.
+
+Created by **[Your Name]** as part of a QA portfolio project to demonstrate API testing skills using Postman.
